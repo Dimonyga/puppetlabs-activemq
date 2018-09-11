@@ -25,19 +25,19 @@
 # }
 #
 class activemq(
-  Enum['present', 'latest', Regexp['^[~+._0-9a-zA-Z:-]+$']]   $version                 = $activemq::params::version,
-                                                              $package                 = $activemq::params::package,
-  Enum['running', 'stopped']                                  $ensure                  = $activemq::params::ensure,
-                                                              $instance                = $activemq::params::instance,
-  Boolean                                                     $webconsole              = $activemq::params::webconsole,
-                                                              $server_config           = $activemq::params::server_config,
-                                                              $server_config_show_diff = $activemq::params::server_config,
-                                                              $mq_broker_name          = $activemq::params::mq_broker_name,
-                                                              $mq_admin_username       = $activemq::params::mq_admin_username,
-                                                              $mq_admin_password       = $activemq::params::mq_admin_password,
-                                                              $mq_cluster_username     = $activemq::params::mq_cluster_username,
-                                                              $mq_cluster_password     = $activemq::params::mq_cluster_password,
-                                                              $mq_cluster_brokers      = $activemq::params::mq_cluster_brokers,
+  String                      $version                 = $activemq::params::version,
+                              $package                 = $activemq::params::package,
+  Enum['running', 'stopped']  $ensure                  = $activemq::params::ensure,
+                              $instance                = $activemq::params::instance,
+  Boolean                     $webconsole              = $activemq::params::webconsole,
+                              $server_config           = $activemq::params::server_config,
+                              $server_config_show_diff = $activemq::params::server_config,
+                              $mq_broker_name          = $activemq::params::mq_broker_name,
+                              $mq_admin_username       = $activemq::params::mq_admin_username,
+                              $mq_admin_password       = $activemq::params::mq_admin_password,
+                              $mq_cluster_username     = $activemq::params::mq_cluster_username,
+                              $mq_cluster_password     = $activemq::params::mq_cluster_password,
+                              $mq_cluster_brokers      = $activemq::params::mq_cluster_brokers,
 ) inherits activemq::params {
 
   $mq_admin_username_real       = $mq_admin_username
