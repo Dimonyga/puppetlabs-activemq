@@ -11,7 +11,7 @@
 # Sample Usage:
 #
 class activemq::packages (
-  Regexp ['^[~+._0-9a-zA-Z:-]+$'] $version,
+  Regexp['^[~+._0-9a-zA-Z:-]+$'] $version,
                                   $package
 ) {
 

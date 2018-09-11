@@ -25,9 +25,9 @@
 # }
 #
 class activemq(
-  Enum ['present', 'latest', Regexp['^[~+._0-9a-zA-Z:-]+$']]  $version                 = $activemq::params::version,
+  Enum['present', 'latest', Regexp['^[~+._0-9a-zA-Z:-]+$']]   $version                 = $activemq::params::version,
                                                               $package                 = $activemq::params::package,
-  Enum ['running', 'stopped']                                 $ensure                  = $activemq::params::ensure,
+  Enum['running', 'stopped']                                  $ensure                  = $activemq::params::ensure,
                                                               $instance                = $activemq::params::instance,
   Boolean                                                     $webconsole              = $activemq::params::webconsole,
                                                               $server_config           = $activemq::params::server_config,

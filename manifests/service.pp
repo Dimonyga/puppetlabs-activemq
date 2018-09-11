@@ -11,8 +11,8 @@
 # Sample Usage:
 #
 class activemq::service(
-  Enum ['running','stopped']  $ensure,
-  Boolean                     $service_enable = $::activemq::params::service_enable
+  Enum['running','stopped'] $ensure,
+  Boolean                   $service_enable = $::activemq::params::service_enable
 ) {
 
   service { 'activemq':
